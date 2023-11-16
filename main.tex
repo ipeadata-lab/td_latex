@@ -1,0 +1,130 @@
+\documentclass[
+  12pt,
+  a4paper,
+]{td}
+
+% Dados do Texto para Discussão
+
+\tdtitle{TÍTULO} %% título
+
+\tdjel{XXX; XXX; XXX.} %% JEL code
+
+\tdpchave{xxxxx; xxxx; xxxx; xxxx.} %% palavras-chave
+
+\tdkwords{xxxxx; xxxx; xxxx; xxxx.} %% keywords
+
+\tdnum{xx} %% número
+
+\tdcidade{xxxx} %% cidade
+
+\tdano{xxxx} %% ano
+
+\tdedicao{xª} %% edição
+
+\tddoi{xx.xxx/xxxxxxx} %% DOI
+
+\tdissn{xxxx-xxxx} %% ISSN
+
+\input{preamble}
+
+\begin{document}
+
+\input{frontpage}
+
+\maketitle
+
+\thispagestyle{fancy}
+
+\setstretch{1.24}
+
+\section*{SINOPSE\footnote{Nota de rodapé}}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus
+fringilla erat, a pulvinar mi. Duis consequat maximus magna, ut rutrum
+ipsum efficitur nec. Duis vel erat sollicitudin, aliquet quam a, sodales
+mi. Ut eu viverra diam. Pellentesque blandit lorem iaculis, pretium
+neque et, ultrices libero. Maecenas fermentum, leo sit amet pharetra
+posuere, nulla augue mattis felis, nec vestibulum tellus dolor efficitur
+mauris. Ut a tellus vitae quam efficitur dictum suscipit pulvinar felis.
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc
+tempus dolor a urna scelerisque suscipit.
+
+\textbf{Palavras-chave:} xxxxx; xxxx; xxxx; xxxx.
+
+\textbf{JEL:} XXX; XXX; XXX.
+
+\section*{ABSTRACT}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus
+fringilla erat, a pulvinar mi. Duis consequat maximus magna, ut rutrum
+ipsum efficitur nec. Duis vel erat sollicitudin, aliquet quam a, sodales
+mi. Ut eu viverra diam. Pellentesque blandit lorem iaculis, pretium
+neque et, ultrices libero. Maecenas fermentum, leo sit amet pharetra
+posuere, nulla augue mattis felis, nec vestibulum tellus dolor efficitur
+mauris. Ut a tellus vitae quam efficitur dictum suscipit pulvinar felis.
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc
+tempus dolor a urna scelerisque suscipit.
+
+\textbf{Keywords:} xxxxx; xxxx; xxxx; xxxx.
+
+\textbf{JEL:} XXX; XXX; XXX.
+
+\newpage{}
+
+\section{SEÇÃO}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus
+fringilla erat, a pulvinar mi. Duis consequat maximus magna, ut rutrum
+ipsum efficitur nec. Duis vel erat sollicitudin, aliquet quam a, sodales
+mi. Ut eu viverra diam. Pellentesque blandit lorem iaculis, pretium
+neque et, ultrices libero. Maecenas fermentum, leo sit amet pharetra
+posuere, nulla augue mattis felis, nec vestibulum tellus dolor efficitur
+mauris. Ut a tellus vitae quam efficitur dictum suscipit pulvinar felis.
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc
+tempus dolor a urna scelerisque suscipit.
+
+\subsection{Subseção}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus
+fringilla erat, a pulvinar mi. Duis consequat maximus magna, ut rutrum
+ipsum efficitur nec. Duis vel erat sollicitudin, aliquet quam a, sodales
+mi. Ut eu viverra diam. Pellentesque blandit lorem iaculis, pretium
+neque et, ultrices libero. Maecenas fermentum, leo sit amet pharetra
+posuere, nulla augue mattis felis, nec vestibulum tellus dolor efficitur
+mauris. Ut a tellus vitae quam efficitur dictum suscipit pulvinar felis.
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc
+tempus dolor a urna scelerisque suscipit. Sobrenome \emph{et al.} (2023)
+
+\begin{table}[!h]
+
+\caption{\\
+        \textbf{Título da tabela}}
+\centering
+\fontsize{11}{13}\selectfont
+\begin{tabular}[t]{>{\raggedright\arraybackslash}m{3.5cm}|>{\raggedright\arraybackslash}m{3.5cm}|>{\raggedright\arraybackslash}m{3.5cm}|>{\raggedright\arraybackslash}m{3.5cm}}
+\hline
+Tipo de dado & Descrição & Fonte & Ano\\
+\hline
+Estabelecimentos de saúde & Localização dos estabelecimentos de saúde vinculados ao SUS segundo nível de complexidade: atenção básica e alta complexidade & CNES, Ministério da Saúde & 2019\\
+\hline
+Dados sociodemográficos & Quantidade de pessoas segundo sexo, idade e cor/raça; média da renda domiciliar per capita & Censo Demográfico, IBGE & 2010\\
+\hline
+Malha viária & Dados espaciais das vias, incluindo trechos para pedestres & OpenStreetMap (OSM) & nov/20\\
+\hline
+Topografia & Modelo digital de elevação, com resolução espacial de aproximadamente 30 metros & Shuttle Radar Topography Mission (SRTM) – Nasa & 2000\\
+\hline
+Transporte Público & Dados de transporte público em formato GTFS & Agências de transporte & 2019\\
+\hline
+Histórico de velocidade de automóveis & Dados da malha viária com atributos de tráfego e sentido da via para automóveis & Streetmap Premium (ESRI/Here) & 1o trimestre de 2018 ao 1o trimestre de 2020\\
+\hline
+\multicolumn{4}{l}{\rule{0pt}{1em}\footnotesize{Nota de rodapé.}}\\
+\end{tabular}
+\end{table}
+
+\figuratd{exemplo/imagem.png}{Título da figura}{Nota de rodapé.}
+
+\hypertarget{referuxeancias}{%
+\section*{Referências}\label{referuxeancias}}
+\addcontentsline{toc}{section}{Referências}
+
+\end{document}
