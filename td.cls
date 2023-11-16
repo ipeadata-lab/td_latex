@@ -35,8 +35,10 @@
 \RequirePackage{wallpaper}
 \RequirePackage{pdfpages} 
 \RequirePackage{enumitem} 
-\RequirePackage[singlelinecheck=false]{caption}
 \RequirePackage{float}
+\RequirePackage{caption}
+\captionsetup{labelsep=newline, labelfont =sc, font=singlespacing,
+skip=0, justification=RaggedRight, singlelinecheck=false}
 \RequirePackage{iftex}
 
 % Configurações de Fonte e Estilo de Página
@@ -181,15 +183,14 @@
   
 %% Alguns comandos úteis
 \newcommand{\figuratd}[3]{
-  \begin{figure}[!h]
-    \caption{\textbf{\hfill\break #2}}
-    \centering
+  \begin{figure}[H]
+    \caption{\textbf{#2}}
     \includegraphics{#1}
     \caption*{\footnotesize #3}
   \end{figure}
 }
 
-% Some commands that will be useful for the title.
+
 \makeatletter
 \newcommand{\tdtitle}[1]{\def\@tdtitle{#1}}
 \newcommand{\tdnum}[1]{\def\@tdnum{#1}}
