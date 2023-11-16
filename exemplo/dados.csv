@@ -1,0 +1,7 @@
+﻿Tipo de dado;Descrição;Fonte;Ano
+Estabelecimentos de saúde;Localização dos estabelecimentos de saúde vinculados ao SUS segundo nível de complexidade: atenção básica e alta complexidade;CNES, Ministério da Saúde;2019
+Dados sociodemográficos;"Quantidade de pessoas segundo sexo, idade e cor/raça; média da renda domiciliar per capita";Censo Demográfico, IBGE;2010
+Malha viária;Dados espaciais das vias, incluindo trechos para pedestres;OpenStreetMap (OSM);nov/20
+Topografia;Modelo digital de elevação, com resolução espacial de aproximadamente 30 metros;Shuttle Radar Topography Mission (SRTM) – Nasa;2000
+Transporte Público;Dados de transporte público em formato GTFS ;Agências de transporte;2019
+Histórico de velocidade de automóveis ;Dados da malha viária com atributos de tráfego e sentido da via para automóveis;Streetmap Premium (ESRI/Here);1o trimestre de 2018 ao 1o trimestre de 2020
