@@ -37,8 +37,9 @@
 \RequirePackage{enumitem} 
 \RequirePackage{float}
 \RequirePackage{caption}
-\captionsetup{labelsep=newline, labelfont =sc, font=singlespacing,
-skip=0, justification=RaggedRight, singlelinecheck=false}
+\DeclareCaptionLabelFormat{uppercase}{\MakeUppercase{#1} #2}
+\captionsetup{labelsep=newline, labelformat=uppercase, font=singlespacing,
+skip=0pt, justification=RaggedRight, singlelinecheck=false}
 \RequirePackage{iftex}
 
 % Configurações de Fonte e Estilo de Página
