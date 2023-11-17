@@ -40,6 +40,8 @@
 \DeclareCaptionLabelFormat{uppercase}{\MakeUppercase{#1} #2}
 \captionsetup{labelsep=newline, labelformat=uppercase, font=singlespacing,
 skip=0pt, justification=RaggedRight, singlelinecheck=false}
+\usepackage{citation-style-language}
+\cslsetup{style = associacao-brasileira-de-normas-tecnicas-ipea}
 \RequirePackage{iftex}
 
 % Configurações de Fonte e Estilo de Página

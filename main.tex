@@ -7,9 +7,9 @@
 
 \tdtitle{TÍTULO} %% título
 
-\tdautor{Autor 1}{Afiliação 1}
+\tdautor{Autor 1}{Afiliação 1} %% autor 1
 
-\tdautor{Autor 2}{Afiliação 2}
+\tdautor{Autor 2}{Afiliação 2} %% autor 2 ....
 
 \tdjel{XXX; XXX; XXX.} %% JEL code
 
@@ -28,6 +28,8 @@
 \tddoi{xx.xxx/xxxxxxx} %% DOI
 
 \tdissn{xxxx-xxxx} %% ISSN
+
+\addbibresource{referencia.bib}
 
 \input{preamble}
 
@@ -67,7 +69,7 @@ neque et, ultrices libero. Maecenas fermentum, leo sit amet pharetra
 posuere, nulla augue mattis felis, nec vestibulum tellus dolor efficitur
 mauris. Ut a tellus vitae quam efficitur dictum suscipit pulvinar felis.
 Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc
-tempus dolor a urna scelerisque suscipit.
+tempus dolor a urna scelerisque suscipit. \cite{nome2023}
 
 \textbf{Keywords:} xxxxx; xxxx; xxxx; xxxx.
 
@@ -97,8 +99,7 @@ neque et, ultrices libero. Maecenas fermentum, leo sit amet pharetra
 posuere, nulla augue mattis felis, nec vestibulum tellus dolor efficitur
 mauris. Ut a tellus vitae quam efficitur dictum suscipit pulvinar felis.
 Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc
-tempus dolor a urna scelerisque suscipit. Sobrenome \emph{et al.} (2023)
-
+tempus dolor a urna scelerisque suscipit. 
 \begin{table}[!h]
 
 \caption{\textbf{Título da tabela}}
@@ -126,5 +127,7 @@ Histórico de velocidade de automóveis & Dados da malha viária com atributos d
 \figuratd{images/imagem.png}{Título da figura}{Nota de rodapé.}{fig-rotulo}
 
 \section*{Referências}
+
+\printbibliography
 
 \end{document}
