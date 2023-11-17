@@ -184,6 +184,7 @@ skip=0pt, justification=RaggedRight, singlelinecheck=false}
   
 %% Alguns comandos úteis
 
+% inclui figuras
 \newcommand{\figuratd}[4]{
   \begin{figure}[!h]
     \caption{\textbf{#2}}
@@ -193,6 +194,7 @@ skip=0pt, justification=RaggedRight, singlelinecheck=false}
   \end{figure}
 }
 
+% inclui metadados da publicação
 \makeatletter
 \newcommand{\tdtitle}[1]{\def\@tdtitle{#1}}
 \newcommand{\tdnum}[1]{\def\@tdnum{#1}}
@@ -205,6 +207,22 @@ skip=0pt, justification=RaggedRight, singlelinecheck=false}
 \newcommand{\tdpchave}[1]{\def\@tdpchave{#1}}
 \newcommand{\tdkwords}[1]{\def\@tdkwords{#1}}
 \makeatother
+
+%cria lista de autores
+\newcommand{\gerautorlist}{
+  \begin{list}{}{%
+    \leftmargin=4.5cm
+    \item[]
+  }
+  \gerautor
+  \end{list}
+}
+
+\newcommand{\gerautor}{}
+
+\newcommand{\tdautor}[2]{%
+  \expandafter\gdef\expandafter\gerautor\expandafter{\gerautor\footnotesize \textbf{#1} \\ \footnotesize #2 \\[1em]}
+}
 
 %% Espaçamento nas referências
 \setlength{\cslentryspacingunit}{\baselineskip}
