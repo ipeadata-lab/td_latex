@@ -228,14 +228,14 @@ skip=0, justification=RaggedRight, singlelinecheck=false}
   \newcommand\listtablename{Lista de Tabelas}
 \fi
 \ifdefined\figurename
-  \renewcommand*\figurename{FIGURA}
+  \renewcommand*\figurename{Figura}
 \else
-  \newcommand\figurename{FIGURA}
+  \newcommand\figurename{Figura}
 \fi
 \ifdefined\tablename
-  \renewcommand*\tablename{TABELA}
+  \renewcommand*\tablename{Tabela}
 \else
-  \newcommand\tablename{TABELA}
+  \newcommand\tablename{Tabela}
 \fi
 }
 \@ifpackageloaded{float}{}{\RequirePackage{float}}
