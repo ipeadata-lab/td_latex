@@ -182,14 +182,15 @@ skip=0, justification=RaggedRight, singlelinecheck=false}
   {0pt} % Espaçamento após a seção
   
 %% Alguns comandos úteis
-\newcommand{\figuratd}[3]{
-  \begin{figure}[H]
+
+\newcommand{\figuratd}[4]{
+  \begin{figure}[!h]
     \caption{\textbf{#2}}
-    \includegraphics{#1}
+    \includegraphics[width=\textwidth]{#1}
     \caption*{\footnotesize #3}
+    \label{#4}
   \end{figure}
 }
-
 
 \makeatletter
 \newcommand{\tdtitle}[1]{\def\@tdtitle{#1}}
