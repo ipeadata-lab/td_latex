@@ -1,0 +1,30 @@
+% frontpage e expediente
+\ThisCenterWallPaper{1}{images/td_capa.png}
+\clearpage
+\thispagestyle{empty} 
+\newgeometry{top=65mm, left=10mm, right=20mm} 
+\makeatletter
+\fboxsep=15pt\fbox{\begin{minipage}[c]{1\textwidth} 
+{\centering
+{\large\bfseries \@tdtitle \par}
+}
+\vspace{1.5cm} 
+{\footnotesize \textbf{Autores(as):}} \par
+\gerautorlist
+\vspace{1cm}
+{\footnotesize \textbf{Produto Editorial:} \hspace{1.45cm} Texto para Discussão nº \@tdnum} \newline
+{\footnotesize \textbf{Cidade:} \hspace{3.10cm} \@tdcidade} \newline
+{\footnotesize \textbf{Editora:} \hspace{3cm} Instituto de Pesquisa
+Econômica Aplicada -- Ipea} \newline
+{\footnotesize \textbf{Ano:} \hspace{3.55cm} \@tdano} \newline
+{\footnotesize \textbf{Edição:} \hspace{3.10cm} \@tdedicao} \newline
+{\footnotesize \textbf{JEL:} \hspace{3.60cm} \@tdjel} \newline
+{\footnotesize \textbf{DOI:}\hspace{3.65cm} \@tddoi} \newline
+{\footnotesize \textbf{ISSN:}\hspace{3.51cm} \@tdissn} \newline
+\end{minipage}}
+\makeatother
+\includepdf[pages={1}, scale=1]{images/td_expediente.pdf}
+\clearpage 
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\restoregeometry

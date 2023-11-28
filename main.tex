@@ -1,48 +1,59 @@
+% !!Não alterar!!! Este comando inclui as configurações da classe do documento
 \documentclass[
   12pt,
   a4paper,
-]{td}
+]{template/td}
 
-% Dados do Texto para Discussão
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Preencha os dados para títutlo e capa da publicação%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\tdtitle{TÍTULO} %% título
+\tdtitle{TÍTULO} % Título do Texto para Discussão
 
-\tdautor{Autor 1}{Afiliação 1} %% autor 1
+\tdautor{Autor 1}{Afiliação 1} % Autor 1 e afiliação
 
-\tdautor{Autor 2}{Afiliação 2} %% autor 2 ....
+\tdautor{Autor 2}{Afiliação 2} % Autor 2 e afiliação ....
+%% Se for necessário adcionar mais autores, repita com comando \tdautor{autor}{afiliação}
 
 \tdjel{XXX; XXX; XXX.} %% JEL code
 
-\tdpchave{xxxxx; xxxx; xxxx; xxxx.} %% palavras-chave
+\tdpchave{xxxxx; xxxx; xxxx; xxxx.} % palavras-chave
 
-\tdkwords{xxxxx; xxxx; xxxx; xxxx.} %% keywords
+\tdkwords{xxxxx; xxxx; xxxx; xxxx.} % keywords
 
-\tdnum{xx} %% número
+\tdnum{xx} % número do TD
 
-\tdcidade{xxxx} %% cidade
+\tdcidade{xxxx} % cidade
 
-\tdano{xxxx} %% ano
+\tdano{xxxx} % ano
 
-\tdedicao{xª} %% edição
+\tdedicao{xª} % edição
 
-\tddoi{xx.xxx/xxxxxxx} %% DOI
+\tddoi{xx.xxx/xxxxxxx} % DOI
 
-\tdissn{xxxx-xxxx} %% ISSN
+\tdissn{xxxx-xxxx} % ISSN
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Adcione o arquivo com as refrêncas bilbigráficas (default: rerefrencia.bib)
 \addbibresource{referencia.bib}
 
-\input{preamble}
+% !!Não alterar!!! Este comando inclui configurações padrao da publicação no preamble do documento tex
+\input{template/preamble}
 
 \begin{document}
 
-\input{frontpage}
+% !!Não alterar!!! Este comando inclui as configurações da capa da publicação
+\input{template/frontpage}
 
 \maketitle
 
+% !!Não alterar!!! Estes comandos configuram aspectos visuais da padrão da publicação
 \thispagestyle{fancy}
-
 \setstretch{1.24}
 
+% Sinopse
 \section*{SINOPSE\footnote{Nota de rodapé}}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus
@@ -55,10 +66,16 @@ mauris. Ut a tellus vitae quam efficitur dictum suscipit pulvinar felis.
 Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc
 tempus dolor a urna scelerisque suscipit.
 
-\textbf{Palavras-chave:} xxxxx; xxxx; xxxx; xxxx.
+% !!Não alterar!!! Os comandos abaixo preenchem palavra-chave e JEL automaticamente
+\makeatletter
+\textbf{Palavras-chave:} \@tdpchave
+\makeatother
 
-\textbf{JEL:} XXX; XXX; XXX.
+\makeatletter
+\textbf{JEL:} \@tdjel
+\makeatother
 
+% Sinopse
 \section*{ABSTRACT}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus
@@ -69,14 +86,20 @@ neque et, ultrices libero. Maecenas fermentum, leo sit amet pharetra
 posuere, nulla augue mattis felis, nec vestibulum tellus dolor efficitur
 mauris. Ut a tellus vitae quam efficitur dictum suscipit pulvinar felis.
 Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc
-tempus dolor a urna scelerisque suscipit. \cite{nome2023}
+tempus dolor a urna scelerisque suscipit.
 
-\textbf{Keywords:} xxxxx; xxxx; xxxx; xxxx.
+% !!Não alterar!!! Os comandos abaixo preenchem keywords e JEL automaticamente
+\makeatletter
+\textbf{Keywords:} \@tdkwords
+\makeatother
 
-\textbf{JEL:} XXX; XXX; XXX.
+\makeatletter
+\textbf{JEL:} \@tdjel
+\makeatother
 
 \newpage{}
 
+% Primeira seção
 \section{SEÇÃO}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus
@@ -89,6 +112,10 @@ mauris. Ut a tellus vitae quam efficitur dictum suscipit pulvinar felis.
 Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc
 tempus dolor a urna scelerisque suscipit.
 
+\citep{nome2023} % referência entre parênteses
+\citet{nome2023} % refrência no texto, sem parêntese
+
+% Subseção
 \subsection{Subseção}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus
@@ -102,6 +129,7 @@ Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc
 tempus dolor a urna scelerisque suscipit. 
 \begin{table}[!h]
 
+% Modelo de tabela
 \caption{\textbf{Título da tabela}}
 \fontsize{11}{13}\selectfont
 \begin{tabular}[t]{>{\raggedright\arraybackslash}m{3.5cm}|>{\raggedright\arraybackslash}m{3.5cm}|>{\raggedright\arraybackslash}m{3.5cm}|>{\raggedright\arraybackslash}m{3.5cm}}
@@ -124,8 +152,10 @@ Histórico de velocidade de automóveis & Dados da malha viária com atributos d
 \end{tabular}
 \end{table}
 
+% Comando para incluir figuras
 \figuratd{images/imagem.png}{Título da figura}{Nota de rodapé.}{fig-rotulo}
 
+% Incluir referências bibliográficas
 \printbibliography
 
 \end{document}

@@ -40,8 +40,8 @@
 \DeclareCaptionLabelFormat{uppercase}{\MakeUppercase{#1} #2}
 \captionsetup{labelsep=newline, labelformat=uppercase, font=singlespacing,
 skip=0pt, justification=RaggedRight, singlelinecheck=false}
-\usepackage{citation-style-language}
-\cslsetup{style = associacao-brasileira-de-normas-tecnicas-ipea}
+\RequirePackage{citation-style-language}
+\cslsetup{style = template/associacao-brasileira-de-normas-tecnicas-ipea}
 \RequirePackage{iftex}
 
 % Configurações de Fonte e Estilo de Página
@@ -113,26 +113,7 @@ skip=0pt, justification=RaggedRight, singlelinecheck=false}
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newlength{\cslentryspacingunit} 
-\setlength{\cslentryspacingunit}{\parskip}
-\newenvironment{CSLReferences}[2] 
- {\setlength{\parindent}{0pt}
-   \ifodd #1
-  \let\oldpar\par
-  \def\par{\hangindent=\cslhangindent\oldpar}
-  \fi
-  \setlength{\parskip}{#2\cslentryspacingunit}
- }
- {}
 \RequirePackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 % Formatação de Página e Títulos
 % Formata numeração da página
@@ -225,9 +206,6 @@ skip=0pt, justification=RaggedRight, singlelinecheck=false}
 \newcommand{\tdautor}[2]{%
   \expandafter\gdef\expandafter\gerautor\expandafter{\gerautor\footnotesize \textbf{#1} \\ \footnotesize #2 \\[1em]}
 }
-
-%% Espaçamento nas referências
-\setlength{\cslentryspacingunit}{\baselineskip}
 
 % Configurações Finais
 \makeatletter
