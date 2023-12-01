@@ -4,4 +4,4 @@ Este template ajudará os pesquisadores do Instituto de Pesquisa Econômica Apli
 
 ## Atenção
 
-Esta extensão está em desenvolvimento e ainda não atende a todos os requisitos do TD expresso.
+Este template está em desenvolvimento e ainda não atende a todos os requisitos do TD expresso.
