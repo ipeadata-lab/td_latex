@@ -8,11 +8,9 @@ Para  utilizar o template em LaTeX:
 
 1. Faça o download dos arquivos deste repositório para o diretório do seu projeto. 
 
-2. Abra o arquivo `main.tex` no seu editor LaTeX de preferência (Overleaf, por exemplo).
+2. Abra o arquivo `main.tex` no seu editor LaTeX de preferência (Overleaf, por exemplo), preencha os campos necessários e escreva seu Texto para Discussão.
 
-3. Preencha os campos necessários e escreva seu Texto para Discussão.
-
-4. Preencha a ficha catalográfica no arquivo `td_expediente_ficha` e salve em `pdf`.
+3. Complete a ficha catalográfica no arquivo `td_expediente_ficha` e salve em `pdf`.
 
 4. Compile o documento.
 
