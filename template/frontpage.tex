@@ -1,8 +1,19 @@
 % frontpage e expediente
-\ThisCenterWallPaper{1}{images/td_capa.png}
+\ThisCenterWallPaper{1}{images/td_capa_v2.png}
 \clearpage
 \thispagestyle{empty} 
-\newgeometry{top=65mm, left=10mm, right=20mm} 
+\newgeometry{top=90mm, left=10mm, right=20mm}
+\makeatletter
+\begin{tikzpicture}[remember picture, overlay]
+   \node [anchor=north east, inner sep=105pt] at ([xshift=2.5cm]current page.north east) {
+      \begin{minipage}{.3\textwidth}
+         \fontsize{70}{78}\selectfont
+         \color{white}
+         \arialboldfont{\@tdnum}
+      \end{minipage}
+   };
+\end{tikzpicture}
+\makeatother
 \makeatletter
 \fboxsep=15pt\fbox{\begin{minipage}[c]{1\textwidth} 
 {\centering
@@ -12,7 +23,6 @@
 {\footnotesize \textbf{Autores(as):}} \par
 \gerautorlist
 \vspace{1cm}
-{\footnotesize \textbf{Produto Editorial:} \hspace{1.45cm} Texto para Discussão nº \@tdnum} \newline
 {\footnotesize \textbf{Cidade:} \hspace{3.10cm} \@tdcidade} \newline
 {\footnotesize \textbf{Editora:} \hspace{3cm} Instituto de Pesquisa
 Econômica Aplicada -- Ipea} \newline
@@ -20,10 +30,9 @@ Econômica Aplicada -- Ipea} \newline
 {\footnotesize \textbf{Edição:} \hspace{3.10cm} \@tdedicao} \newline
 {\footnotesize \textbf{JEL:} \hspace{3.60cm} \@tdjel} \newline
 {\footnotesize \textbf{DOI:}\hspace{3.65cm} \@tddoi} \newline
-{\footnotesize \textbf{ISSN:}\hspace{3.51cm} \@tdissn} \newline
 \end{minipage}}
 \makeatother
-\includepdf[pages={1}, scale=1]{images/td_expediente.pdf}
+\includepdf[pages={1}, scale=1]{td_expediente_ficha.pdf}
 \clearpage 
 \pagenumbering{arabic}
 \setcounter{page}{1}

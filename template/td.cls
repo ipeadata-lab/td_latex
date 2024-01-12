@@ -17,7 +17,6 @@
 \RequirePackage{array}
 \RequirePackage{multirow}
 \RequirePackage{wrapfig}
-\RequirePackage{float}
 \RequirePackage{colortbl}
 \RequirePackage{pdflscape}
 \RequirePackage{tabu}
@@ -36,6 +35,7 @@
 \RequirePackage{pdfpages} 
 \RequirePackage{enumitem} 
 \RequirePackage{float}
+\RequirePackage{fontspec}
 \RequirePackage{caption}
 \DeclareCaptionLabelFormat{uppercase}{\MakeUppercase{#1} #2}
 \captionsetup{labelsep=newline, labelformat=uppercase, font=singlespacing,
@@ -206,6 +206,10 @@ skip=0pt, justification=RaggedRight, singlelinecheck=false}
 \newcommand{\tdautor}[2]{%
   \expandafter\gdef\expandafter\gerautor\expandafter{\gerautor\footnotesize \textbf{#1} \\ \footnotesize #2 \\[1em]}
 }
+
+% Define um novo comando para Arial em negrito
+\newfontfamily\arialboldfont{Arial Bold}
+\newcommand{\textarialbold}[1]{{\arialboldfont #1}}
 
 % Configurações Finais
 \makeatletter
